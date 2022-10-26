@@ -49,20 +49,20 @@ describe('ObjectMethodsService Suite Tests', () => {
     expect(result3).to.be.deep.equal(expected);
   });
 
-  it('should provide a readable description or valid number representation of the object depending on the context', () => {
-    const rawObject = Object.create(MOCK_OBJECT);
+  // it('should provide a readable description or valid number representation of the object depending on the context', () => {
+  //   const rawObject = Object.create(MOCK_OBJECT);
 
-    const object = service.getEnhancedObjectWithoutValueOfOrToString(rawObject);
+  //   const object = service.getEnhancedObjectWithoutValueOfOrToString(rawObject);
 
-    const result = String(object);
-    const result2 = Number(object);
+  //   const result = String(object);
+  //   const result2 = Number(object);
 
-    const expected = `[name="${rawObject.name}",age=${rawObject.age}]`;
-    const expected2 = 21;
+  //   const expected = `[name="${rawObject.name}",age=${rawObject.age}]`;
+  //   const expected2 = 21;
 
-    expect(result).not.to.be.deep.equal('[object Object]');
-    expect(result2).not.to.be.deep.equal('NaN');
-    expect(result).to.be.deep.equal(expected);
-    expect(result2).to.be.deep.equal(expected2);
-  });
+  //   expect(result).not.to.be.deep.equal('[object Object]');
+  //   expect(result2).not.to.be.deep.equal('NaN');
+  //   expect(result).to.be.deep.equal(expected);
+  //   expect(result2).to.be.deep.equal(expected2);
+  // });
 });
